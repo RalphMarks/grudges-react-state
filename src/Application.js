@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import id from 'uuid/v4';
+//import id from 'uuid/v4';
+import { v4 } from 'uuid';
 
 import Grudges from './Grudges';
 import NewGrudge from './NewGrudge';
@@ -11,7 +12,7 @@ const Application = () => {
   const [grudges, setGrudges] = useState(initialState);
 
   const addGrudge = grudge => {
-    grudge.id = id();
+    grudge.id = v4();
     grudge.forgiven = false;
     setGrudges([grudge, ...grudges]);
   };
