@@ -1,6 +1,6 @@
 import React, { useReducer, createContext, useCallback } from 'react';
 import initialState from './initialState';
-import id from 'uuid/v4';
+import { v4 as id} from 'uuid';
 
 export const GrudgeContext = createContext();
 
